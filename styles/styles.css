@@ -106,7 +106,7 @@ img {
 	padding: 24px 0;
 }
 .logo:focus {
-	outline: 1px solid var(--accent-color);
+	outline: 2px solid var(--accent-color);
 }
 
 .logo-accent {
@@ -125,7 +125,20 @@ img {
 	margin-left: 50px;
 }
 .nav-list-item {
-	display: flex;
+	position: relative;
+}
+
+.current::before {
+	content: "";
+
+	position: absolute;
+	bottom: 0;
+
+	height: 4px;
+	width: 100%;
+
+	border-radius: 2px;
+	background-color: var(--accent-color);
 }
 
 .nav-list-link,
@@ -143,6 +156,12 @@ img {
 
 .current {
 	color: var(--accent-color);
+}
+.current::after {
+	content: "";
+	height: 4px;
+	width: 100%;
+	background-color: var(--accent-color);
 }
 
 .contacts-list {
@@ -234,7 +253,7 @@ img {
 }
 
 /* --------------------------------ОСОБЕННОСТИ------------------ */
-.peculiarities {
+.is-padding {
 	padding-bottom: 0;
 }
 .peculiarities-list {
@@ -304,9 +323,28 @@ img {
 	margin-left: -30px;
 }
 .works-list-item {
+	position: relative;
 	flex-basis: calc(100% / 4 - 30px);
 
 	margin-left: 30px;
+}
+.works-overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	background-color: rgba(47, 48, 58, 0.8);
+}
+.works-overlay p {
+	padding: 27px 0;
+
+	font-weight: 700;
+
+	line-height: 1.14;
+	text-align: center;
+
+	text-transform: uppercase;
+	color: var(--primary-white-color);
 }
 
 /* --------------------------------НАША КОМАНДА------------------ */
@@ -506,9 +544,40 @@ img {
 	margin: -15px;
 }
 .portfolio-list-item {
+	/* position: relative;
+	overflow: hidden; */
 	flex-basis: calc(100% / 3 - 30px);
 
 	margin: 15px;
+}
+.thumb {
+	position: relative;
+	overflow: hidden;
+}
+
+.text-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
+	height: 100%;
+	width: 100%;
+
+	background-color: rgba(33, 150, 243, 0.9);
+	overflow: auto;
+	transform: translateY(100%);
+	transition: transform 250ms ease;
+}
+.portfolio-list-item:hover .text-overlay {
+	transform: translateY(0);
+}
+.text-overlay p {
+	padding: 63px 24px;
+
+	font-size: 18px;
+	line-height: 1.55;
+
+	color: var(--primary-white-color);
 }
 
 .text-content {
