@@ -9,6 +9,8 @@
 	--box-shadow-color: rgba(0, 0, 0, 0.15);
 	--primary-white-color: #ffffff;
 	--icons-fill: #afb1b8;
+
+	--animate-duration: 550ms;
 }
 
 body {
