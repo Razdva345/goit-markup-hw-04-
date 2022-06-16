@@ -735,3 +735,6 @@ img {
 	pointer-events: none;
 	visibility: hidden;
 }
+.no-scroll {
+	overflow: hidden;
+}
