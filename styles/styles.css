@@ -336,6 +336,16 @@ img {
 	width: 100%;
 
 	background-color: rgba(47, 48, 58, 0.8);
+	color: var(--primary-white-color);
+
+	padding: 27px 0;
+
+	font-weight: 700;
+
+	line-height: 1.14;
+	text-align: center;
+
+	text-transform: uppercase;
 }
 .works-overlay p {
 	padding: 27px 0;
@@ -720,7 +730,4 @@ img {
 	opacity: 0;
 	pointer-events: none;
 	visibility: hidden;
-}
-.no-scroll {
-	overflow: hidden;
 }
